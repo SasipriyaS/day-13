@@ -1,0 +1,32 @@
+public class pair_example {
+    public static void main(String[] args)
+    {
+        pair[] arr = new pair[5];
+        for (int i = 0; i < 5; i++) {
+            arr[i] = new pair(i + 1, i + 2);
+        }
+       
+        for (pair i : arr) {
+            System.out.println(i);
+        }
+       
+        int value = arr[3].second;
+        System.out.println("Required Value = " + value);
+    }
+}
+ 
+class pair {
+    int first, second;
+
+    pair(int first, int second)
+    {
+        this.first = first;
+        this.second = second;
+    }
+pair values() { return new pair(first, second); }
+   
+    @Override public String toString()
+    {
+        return first + "," + second;
+    }
+}
